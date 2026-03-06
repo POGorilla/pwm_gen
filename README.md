@@ -1,5 +1,3 @@
-# Tema: Generator semnal PWM
-
 ## Background
 
 În cadrul multor dispozitive electronice, inclusiv microcontrolere ca ATmega328P care se află pe plăci Arduino Uno, se regăsesc circuite dedicate pentru generarea semnalelor de tip PWM (Pulse Width Modulation).
@@ -161,24 +159,6 @@ Alte precizări:
 Însă valorile acestea se vor schimba doar când numărătorul va da overflow/underflow sau se va opri.
 3. `COUNTER_VAL` practic este valoarea numărătorului care poate fi citită de software (programatorul embedded care dă comenzi perifericului prin SPI).
 4. `COUNTER_RESET` resetează valoarea numărătorului, dar nu și restul parametriilor.
-
-## Cerințe
-
-Având în vedere descrierea modulului de mai sus, cât și funcționarea acestuia, pentru a rezolva această temă, trebuie finalizate cerințele de mai de jos.
-Trebuie ținut cont de faptul că toate cerințele se vor rezolva în echipe de câte 3 persoane, deci trebuie să vă împărțiți în mod echitabil etapele de mai jos pentru a implementa întregul modul:
-
-1. Citiți tot enunțul temei cu atenție înainte de scrierea implementării. 
-Asta va fi important să înțelegeți modul de funcționare al perifericului și modul în care veți elabora soluția.
-2. În secțiunea temei aveți un [schelet de cod](https://github.com/cs-pub-ro/computer-architecture/tree/main/assignments/projects/pwmgen/code) unde apar definițiile modulelor, și pe care voi trebuie să le completați implementările.
-Respectați denumirile semnalelor și nu schimbați antetul modulelor la implementarea lor, mai ales la nivelul `top.v`.
-3. Va trebui să scrieți implementarea fiecărui modul care se află în structura temei, astfel încât legate împreună, să rezulte funcționarea perifericului așa cum e descris în secțiunea **Arhitectura modulului**.
-4. După veți testa acest modul cu ajutorul testbench-ului dat de către noi și verificați că niciun test nu pică.
-La laborator o să vă explice mai multe detalii despre cum ar trebui să știți că soluția nu are probleme.
-5. Apoi va trebui să redactați o documentație sub formă text (LaTex) în care veti explica modalitatea de implementare a temei.
-Asta înseamnă să explicați particularitățile implementației voastre, și mai puțin arhitectura modulului (fiindcă aceasta deja v-a fost prezentată).
-
-Puncte bonus pentru:
-
 1. Organizarea codului într-un mod coerent (adică variabile denumite clar, împărțirea codulul comportamental în fiecare componentă distinctă);
 2. Comentarii utile (nu scrieți codul în cuvinte, ci explicați de ce ați ales acea implementare, hack-uri folosite pentru acea soluție, sau de ce funcționează deși pare că nu sau că e atipic)l
 3. Documentație clar formulată, urmăriți cerința și indicațiile din temă.
